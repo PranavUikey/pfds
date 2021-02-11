@@ -1,0 +1,424 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Getting Started &#8212; Python Demo Course</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Jupyter Notebook 101" href="01_jupyter_notebooks.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo_com.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Python Demo Course</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="#">
+   Getting Started
+  </a>
+ </li>
+</ul>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="01_jupyter_notebooks.html">
+   Jupyter Notebook 101
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02_expressions.html">
+   Expressions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03_flow_control.html">
+   Flow Control
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04_loops.html">
+   Loops
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="05_functions.html">
+   Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06_lists.html">
+   List
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="07_dictionaries.html">
+   Other data structures
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#about-this-course">
+   About this course
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-programming-language">
+   Python Programming Language
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#installation">
+   Installation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-is-anaconda">
+     What is Anaconda?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#why-anaconda">
+     Why Anaconda?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-to-install-anaconda">
+     How to install Anaconda?
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#visit-the-anaconda-website-by-clicking-here">
+       1. Visit the anaconda website by clicking here
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#click-on-the-downloaded-file-to-open-it">
+       2. Click on the downloaded file to open it
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#choose-where-you-want-to-install-it">
+       3. Choose where you want to install it
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#add-anaconda-to-your-path">
+       4. Add Anaconda to your PATH
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#finish">
+       5. Finish
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-use-it">
+   How to use it?
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="getting-started">
+<h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="about-this-course">
+<h2>About this course<a class="headerlink" href="#about-this-course" title="Permalink to this headline">¶</a></h2>
+<p>Python course covers basic Python programming concepts. Here’s a brief rundown of what you’ll learn in this course:</p>
+<ul class="simple">
+<li><p><strong>Expressions</strong> - The most basic type of Python instruction.</p></li>
+<li><p><strong>Flow Control</strong> - Make programs decide which instructions to execute so your code can respond to different conditions.</p></li>
+<li><p><strong>Functions</strong> - Organize your code into more manageable chunks using functions.</p></li>
+<li><p><strong>Built-in Data Structures</strong> - Use lists, tuples, dictionaries and sets to manage your data better.</p></li>
+<li><p><strong>Comprehensions and Iterators</strong> - Write super concise code.</p></li>
+<li><p><strong>Exception handling</strong> - Don’t be afraid of errors instead handle them better.</p></li>
+<li><p><strong>Strings and Regex</strong> - Find patterns in text.</p></li>
+<li><p><strong>Files</strong> - Read &amp; write data to persistent storage.</p></li>
+<li><p><strong>Object Oriented Programming (OOPs)</strong> - Use classes and objects to write reuseable code.</p></li>
+</ul>
+<p>To learn and understand all the concepts better, you will be developing games and building projects, throughout the course.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is a demo of Python course, there is much more to offer you in complete python course.</p>
+</div>
+</div>
+<div class="section" id="python-programming-language">
+<h2>Python Programming Language<a class="headerlink" href="#python-programming-language" title="Permalink to this headline">¶</a></h2>
+<p>In this data-driven age, Python has become an essential tool for many programmers, engineers, researchers, and data scientists across academia and industry.</p>
+<p>Being an AI start-up focused on building and promoting the Machine Learning and Data Science, we have found Python to be a near-perfect fit for the types of problems we face day to day, whether it’s developing small web-apps, extracting meaning from large datasets, scraping and munging data collected from the Web, or automating day-to-day tasks.</p>
+<p>The appeal of Python is in its <em>simplicity</em> and <em>beauty</em>, as well as the convenience of the <em>large ecosystem</em> of domain-specific tools that have been built on top of it.
+For example, most of the Python code in scientific computing and data science is built around a group of mature and useful packages:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://numpy.org">NumPy</a> provides efficient storage and computation for multi-dimensional data arrays.</p></li>
+<li><p><a class="reference external" href="http://scipy.org">SciPy</a> contains a wide array of numerical tools such as numerical integration and interpolation.</p></li>
+<li><p><a class="reference external" href="http://pandas.pydata.org">Pandas</a> provides a DataFrame object along with a powerful set of methods to manipulate, filter, group, and transform data.</p></li>
+<li><p><a class="reference external" href="http://matplotlib.org">Matplotlib</a> provides a useful interface for creation of publication-quality plots and figures.</p></li>
+<li><p><a class="reference external" href="http://scikit-learn.org">Scikit-Learn</a> provides a uniform toolkit for applying common machine learning algorithms to data.</p></li>
+<li><p><a class="reference external" href="http://jupyter.org">IPython/Jupyter</a> provides an enhanced terminal and an interactive notebook environment that is useful for exploratory analysis, as well as creation of interactive, executable documents. For example, this course was developed entirely using Jupyter notebooks.</p></li>
+</ul>
+<p>No less important are the numerous other tools and packages which accompany these: if there is a scientific or data analysis task you want to perform, chances are someone has written a package that will do it for you.</p>
+<p>To tap into the power of this data science ecosystem, however, first requires familiarity with the Python language itself. Our aim, with this course, is that students will walk away with a solid foundation about python and programming (in general).</p>
+</div>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<div class="admonition-python-3-over-python-2 admonition">
+<p class="admonition-title">Python-3 over Python-2</p>
+<p>We are using Python 3, which contains language enhancements that are not compatible with the <em>2.x</em> series of Python.</p>
+</div>
+<p>Before we can use python, we will have to install it. Though there are various ways to install Python, the one we would suggest – particularly if you wish to eventually use the data science tools mentioned above – is via the cross-platform Anaconda distribution.</p>
+<div class="section" id="what-is-anaconda">
+<h3>What is Anaconda?<a class="headerlink" href="#what-is-anaconda" title="Permalink to this headline">¶</a></h3>
+<p>Anaconda is the standard platform for Python, Data Science, and open-source machine learning. <a class="reference external" href="https://www.continuum.io/downloads">Anaconda</a> includes both Python and <code class="docutils literal notranslate"><span class="pre">conda</span></code>, and additionally bundles a suite of other pre-installed packages geared toward scientific computing.</p>
+<p>Python is a programming language, and <code class="docutils literal notranslate"><span class="pre">conda</span></code> is free &amp; open-source package manager, which makes package management and deployment simpler. Just like <em>Play store</em> in android phones (or <em>App store</em> in iphones).</p>
+<p>Imagine Anaconda as a tool that has multiple subtools like <strong>Jupyter Notebook</strong>, <strong>JupyterLab</strong>, <strong>Spyder</strong>. Just like MS-Office, it has subtools such as MS-Word, MS-Excel, MS-PowerPoint, etc.</p>
+</div>
+<div class="section" id="why-anaconda">
+<h3>Why Anaconda?<a class="headerlink" href="#why-anaconda" title="Permalink to this headline">¶</a></h3>
+<p>For programming newbies, installing python, choosing the right IDE, installing data science libraries, etc can be a daunting task. Not just installation, knowing all the packages needed for data science (and their versions) is another challenge. That is where Anaconda comes into the picture. Anaconda automated the complete process. So that beginners can focus on learning.</p>
+</div>
+<div class="section" id="how-to-install-anaconda">
+<h3>How to install Anaconda?<a class="headerlink" href="#how-to-install-anaconda" title="Permalink to this headline">¶</a></h3>
+<p>Anaconda is a lot more user-friendly than you might think. As installation just requires a couple of clicks.</p>
+<div class="section" id="visit-the-anaconda-website-by-clicking-here">
+<h4>1. Visit the anaconda website by clicking <a class="reference external" href="https://www.anaconda.com/products/individual">here</a><a class="headerlink" href="#visit-the-anaconda-website-by-clicking-here" title="Permalink to this headline">¶</a></h4>
+<p>After you visit the website, click on <em>download</em> button. You might see something like below.</p>
+<p><strong>Note:</strong> The website is frequently updated and hence, things might look a bit different. Don’t worry, you can always ask your mentor for help.</p>
+<p>You must choose according to your system (<strong>Linux</strong>, <strong>Windows</strong>, <strong>Mac</strong>). You can download the installer for <strong>Python 3.8</strong> (latest version at the time of writing). And you can download it for a 32-bit or 64-bit machine.</p>
+<p><img alt="" src="../_images/anaconda_version.png" /></p>
+</div>
+<div class="section" id="click-on-the-downloaded-file-to-open-it">
+<h4>2. Click on the downloaded file to open it<a class="headerlink" href="#click-on-the-downloaded-file-to-open-it" title="Permalink to this headline">¶</a></h4>
+<p>This is the Anaconda setup. Click <em>Next</em> until you see somthing like this.
+Here it is recomended to keep <strong>Just Me</strong> option. And click <em>Next</em>.</p>
+<p><img alt="" src="../_images/just_me.png" /></p>
+</div>
+<div class="section" id="choose-where-you-want-to-install-it">
+<h4>3. Choose where you want to install it<a class="headerlink" href="#choose-where-you-want-to-install-it" title="Permalink to this headline">¶</a></h4>
+<p>Here, you can install it in any drive which you want to install it in and also shows the available space and how much you need it.</p>
+<p><img alt="" src="../_images/anaconda_path.png" /></p>
+</div>
+<div class="section" id="add-anaconda-to-your-path">
+<h4>4. Add Anaconda to your PATH<a class="headerlink" href="#add-anaconda-to-your-path" title="Permalink to this headline">¶</a></h4>
+<p>Now, you’ll get some advanced options. Add Anaconda to your system’s <strong>PATH environment variable</strong>, and register it as the primary system <strong>Python 3.8</strong>. If you add it to PATH, it will be found before any other installation(It is not recommended but from my experience, we would recommend doing so, if not you will face problems in the future while installing some libraries). Click on <em>Install</em>. It takes a few minutes to install.</p>
+<p><img alt="" src="../_images/add_to_path.png" /></p>
+</div>
+<div class="section" id="finish">
+<h4>5. Finish<a class="headerlink" href="#finish" title="Permalink to this headline">¶</a></h4>
+<p>After sucessful installation of Anaconda you might see this. Once you are done with installation. Click <em>Finish</em>.</p>
+<p><img alt="" src="../_images/anaconda_finish.png" /></p>
+<div class="admonition-google-colab admonition">
+<p class="admonition-title">Google Colab</p>
+<p>If for some reason you are unable to install anaconda in your system, then you can always use Google Colab to run python code. Colaboratory (also known as Colab) is a free Jupyter notebook environment that runs in the cloud and stores its notebooks on Google Drive.</p>
+<p>No setup is required, you will only need a browser, internet connection and a Gmail account.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="how-to-use-it">
+<h2>How to use it?<a class="headerlink" href="#how-to-use-it" title="Permalink to this headline">¶</a></h2>
+<p>After installation, click on start button (lower left corner) and start typing <strong>Anaconda</strong> you will see the suggested applications from your system something like this. And click on <strong>Anaconda Navigator</strong>.</p>
+<p>Similary, Mac and Linux user can search for <strong>Anaconda Navigator</strong> application in their systems.</p>
+<p><img alt="" src="../_images/anaconda_search.png" /></p>
+<p>As told earlier Anaconda has subtools, we will be using <strong>Jupyter Notebook</strong> throughout this course.</p>
+<p><img alt="" src="../_images/navigator.png" /></p>
+<p>After you click the Jupyter Notebook you will get redirected to your default web browser. Click on the <em>New</em> button on upper right
+corner and create a new folder. It will automatically name it as <strong>Untitled Folder</strong>.</p>
+<p><img alt="" src="../_images/new_folder.png" /></p>
+<p>After creating new folder click the check box beside a <strong>Untitled folder</strong>  and rename it from upper left corner as shown in the image below. You can name it anything you want.</p>
+<p><img alt="" src="../_images/rename_folder.png" /></p>
+<p>Now, open the newly created folder, and again click on <em>New</em> button. This time select <strong>Python 3</strong> to create a new Jupyter Notebook.
+Click on that file and you will see like below.</p>
+<p><img alt="" src="../_images/notebook.png" /></p>
+<p>This is your new Notebook. You can type python code in this. To execute a statement or multiple statements at once, press <kbd>Shift+Enter</kbd>. Pressing only <kbd>Enter</kbd> will only take you to the next line.</p>
+<p>Congratulations!! You have successfully installed anaconda on your machine.</p>
+<p>We think in terms of the tools 🛠 we use. So, its very important to choose them wisely. Jupyter Notebook is a wonderful tool. It had a huge impact not only in Data Science but Research in general. Scientist love Jupyter Notebook because of its interactivity. We will be using Jupyter notebook throughout this course. So, let spend some time learning Jupyter Notebook, before we get started with python programming.</p>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./course_material"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='right-next' id="next-link" href="01_jupyter_notebooks.html" title="next page">Jupyter Notebook 101</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By aiadventures<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>
